@@ -2,6 +2,8 @@
 read -p "Enter a value:" a
 read -p "Enter b value:" b
 read -p "Enter c value:" c
+operation4=$(( ($a%$b)+$c ))
+echo "The operation4 value is:"$operation4
 operation3=$(( $c+($a/$b) ))
 echo "The operation3  value is:"$operation3
 operation1=$(( $a+($b*$c) ))
