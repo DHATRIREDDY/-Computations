@@ -17,3 +17,4 @@ dict["op2"]=$operation2
 dict["op3"]=$operation3
 dict["op4"]=$operation4
 echo "stored results in Dictionary:"${dict[@]}
+
