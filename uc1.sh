@@ -1,5 +1,10 @@
 #!/bin/bash
 declare -A dict
+
+function storeArray(){
+	array=("$@")
+}
+
 read -p "Enter a value:" a
 read -p "Enter b value:" b
 read -p "Enter c value:" c
@@ -17,4 +22,8 @@ dict["op2"]=$operation2
 dict["op3"]=$operation3
 dict["op4"]=$operation4
 echo "stored results in Dictionary:"${dict[@]}
+
+echo "Results added from dictionary to arry:"
+storeArray ${dict[@]}
+echo ${array[@]}
 
