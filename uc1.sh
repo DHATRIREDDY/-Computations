@@ -4,7 +4,21 @@ declare -A dict
 function storeArray(){
 	array=("$@")
 }
-
+function descending_order(){
+	n=${#array[@]}
+	for(( i=0;i<n;i++ ))
+	do
+		for(( j=0;j<n-i-1;j++ ))
+		do
+			if [ ${array[j]} -lt ${array[$((j+1))]} ]
+			then
+				temp=${array[j]}
+				array[j]=${array[$((j+1))]}
+				array[$((j+1))]=$temp
+			fi
+		done
+	done
+}
 read -p "Enter a value:" a
 read -p "Enter b value:" b
 read -p "Enter c value:" c
@@ -27,3 +41,6 @@ echo "Results added from dictionary to arry:"
 storeArray ${dict[@]}
 echo ${array[@]}
 
+echo "Result in Descending order:"
+descending_order ${array[@]}
+echo ${array[@]}
