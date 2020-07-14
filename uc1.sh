@@ -27,5 +27,3 @@ echo "Results added from dictionary to arry:"
 storeArray ${dict[@]}
 echo ${array[@]}
 
-
-
